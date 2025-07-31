@@ -48,6 +48,3 @@ Automated tests are implemented in `tests/tests.spec.ts` using Playwright. Repor
 
 ## Author
 - Maintained by Naveen Chauhan
-
-## License
-MIT
