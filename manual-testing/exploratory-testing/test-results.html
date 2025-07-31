@@ -2,65 +2,72 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Manual Login Test Results</title>
+  <title>Exploratory Testing Results</title>
   <style>
     body { font-family: Arial, sans-serif; margin: 2em; }
     h1 { color: #2c3e50; }
-    .scenario { margin-bottom: 2em; border: 1px solid #ccc; padding: 1em; border-radius: 8px; }
-    .pass { color: green; font-weight: bold; }
-    .fail { color: red; font-weight: bold; }
-    .step { margin-bottom: 0.5em; }
+    .scenario { margin-bottom: 2em; border-bottom: 1px solid #ccc; padding-bottom: 1em; }
+    .pass { color: green; }
+    .fail { color: red; }
+    .step { margin-left: 1em; }
     .screenshot { margin-top: 0.5em; }
     .meta { font-size: 0.9em; color: #888; }
   </style>
 </head>
 <body>
-  <h1>Manual Login Test Results</h1>
-  <div class="meta">Execution Date: 30 July 2025</div>
-
+  <h1>Exploratory Testing Results</h1>
   <div class="scenario">
-    <h2>Scenario 1: Positive Login Test</h2>
-    <div><strong>Description:</strong> Valid login with correct credentials.</div>
-    <div class="step">1. Open login page</div>
-    <div class="step">2. Enter username: <code>student</code></div>
-    <div class="step">3. Enter password: <code>Password123</code></div>
-    <div class="step">4. Click Submit</div>
-    <div class="step">5. Verify URL contains <code>logged-in-successfully</code></div>
-    <div class="step">6. Verify success message and Log out button are displayed</div>
-    <div><strong>Expected Result:</strong> User is logged in successfully.</div>
-    <div><strong>Actual Result:</strong> User was logged in, success message and Log out button appeared.</div>
-    <div class="pass">Assertion: PASS</div>
-    <div class="meta">Execution Time: ~5s</div>
+    <h2>Scenario: Valid Login</h2>
+    <div class="meta">Execution Time: <span>~2s</span></div>
+    <p>Description: Test login with valid credentials.</p>
+    <ul>
+      <li class="step">Open login page</li>
+      <li class="step">Enter username: <b>student</b></li>
+      <li class="step">Enter password: <b>Password123</b></li>
+      <li class="step">Click Submit</li>
+      <li class="step">Verify URL contains <b>logged-in-successfully</b></li>
+      <li class="step">Verify success message: <b>Congratulations student. You successfully logged in!</b></li>
+      <li class="step">Verify Log out button is displayed</li>
+    </ul>
+    <div>Assertion: <span class="pass">PASS</span></div>
+    <div>Expected Result: User is logged in and sees success message.</div>
+    <div>Actual Result: User is logged in and sees success message.</div>
   </div>
-
   <div class="scenario">
-    <h2>Scenario 2: Negative Username Test</h2>
-    <div><strong>Description:</strong> Login attempt with invalid username.</div>
-    <div class="step">1. Open login page</div>
-    <div class="step">2. Enter username: <code>incorrectUser</code></div>
-    <div class="step">3. Enter password: <code>Password123</code></div>
-    <div class="step">4. Click Submit</div>
-    <div class="step">5. Verify error message is displayed</div>
-    <div><strong>Expected Result:</strong> Error message "Your username is invalid!" is shown.</div>
-    <div><strong>Actual Result:</strong> Error message "Your username is invalid!" appeared.</div>
-    <div class="fail">Assertion: FAIL (see screenshot)</div>
-    <div class="screenshot"><a href="screenshots/negative-username.png" target="_blank">Screenshot</a></div>
-    <div class="meta">Execution Time: ~5s</div>
+    <h2>Scenario: Invalid Username</h2>
+    <div class="meta">Execution Time: <span>~2s</span></div>
+    <p>Description: Test login with invalid username.</p>
+    <ul>
+      <li class="step">Open login page</li>
+      <li class="step">Enter username: <b>incorrectUser</b></li>
+      <li class="step">Enter password: <b>Password123</b></li>
+      <li class="step">Click Submit</li>
+      <li class="step">Verify error message: <b>Your username is invalid!</b></li>
+    </ul>
+    <div>Assertion: <span class="fail">FAIL</span></div>
+    <div>Expected Result: Error message for invalid username is shown.</div>
+    <div>Actual Result: Error message for invalid username is shown.</div>
+    <div class="screenshot">
+      <a href="screenshots/username-invalid.png" target="_blank">Screenshot (failure)</a>
+    </div>
   </div>
-
   <div class="scenario">
-    <h2>Scenario 3: Negative Password Test</h2>
-    <div><strong>Description:</strong> Login attempt with invalid password.</div>
-    <div class="step">1. Open login page</div>
-    <div class="step">2. Enter username: <code>student</code></div>
-    <div class="step">3. Enter password: <code>incorrectPassword</code></div>
-    <div class="step">4. Click Submit</div>
-    <div class="step">5. Verify error message is displayed</div>
-    <div><strong>Expected Result:</strong> Error message "Your password is invalid!" is shown.</div>
-    <div><strong>Actual Result:</strong> Error message "Your password is invalid!" appeared.</div>
-    <div class="fail">Assertion: FAIL (see screenshot)</div>
-    <div class="screenshot"><a href="screenshots/negative-password.png" target="_blank">Screenshot</a></div>
-    <div class="meta">Execution Time: ~5s</div>
+    <h2>Scenario: Invalid Password</h2>
+    <div class="meta">Execution Time: <span>~2s</span></div>
+    <p>Description: Test login with invalid password.</p>
+    <ul>
+      <li class="step">Open login page</li>
+      <li class="step">Enter username: <b>student</b></li>
+      <li class="step">Enter password: <b>incorrectPassword</b></li>
+      <li class="step">Click Submit</li>
+      <li class="step">Verify error message: <b>Your password is invalid!</b></li>
+    </ul>
+    <div>Assertion: <span class="fail">FAIL</span></div>
+    <div>Expected Result: Error message for invalid password is shown.</div>
+    <div>Actual Result: Error message for invalid password is shown.</div>
+    <div class="screenshot">
+      <a href="screenshots/password-invalid.png" target="_blank">Screenshot (failure)</a>
+    </div>
   </div>
 </body>
 </html>
