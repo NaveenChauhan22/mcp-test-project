@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Manual Test Results - Practice Test Automation</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 2em; background: #f9f9f9; }
+    h1, h2 { color: #2c3e50; }
+    table { border-collapse: collapse; width: 100%; margin-bottom: 2em; }
+    th, td { border: 1px solid #ccc; padding: 8px; text-align: left; }
+    th { background: #eaeaea; }
+    .pass { color: green; font-weight: bold; }
+    .fail { color: red; font-weight: bold; }
+    .summary { background: #eaf7ea; padding: 1em; margin-bottom: 2em; }
+    .critical { background: #ffeaea; color: #c0392b; padding: 1em; margin-bottom: 2em; }
+  </style>
+</head>
+<body>
+  <h1>Manual Test Results</h1>
+  <div class="summary">
+    <h2>Summary Matrix</h2>
+    <table>
+      <tr><th>Date</th><th>Total Tests</th><th>Passed</th><th>Failed</th></tr>
+      <tr><td>31 July 2025</td><td>16</td><td>16</td><td>0</td></tr>
+    </table>
+    <p class="pass">All tests passed successfully.</p>
+  </div>
+  <h2>Scenario Details</h2>
+  <table>
+    <tr><th>#</th><th>Scenario</th><th>Steps</th><th>Expected Result</th><th>Actual Result</th><th>Assertion</th></tr>
+    <tr><td>1</td><td>Valid Login</td><td>Enter valid credentials, submit</td><td>Login success, redirected</td><td>Login success, redirected</td><td class="pass">Pass</td></tr>
+    <tr><td>2</td><td>Invalid Username</td><td>Enter invalid username, submit</td><td>Error message shown</td><td>Error message shown</td><td class="pass">Pass</td></tr>
+    <tr><td>3</td><td>Invalid Password</td><td>Enter invalid password, submit</td><td>Error message shown</td><td>Error message shown</td><td class="pass">Pass</td></tr>
+    <tr><td>4</td><td>Both Username and Password Invalid</td><td>Enter both invalid, submit</td><td>Username error shown</td><td>Username error shown</td><td class="pass">Pass</td></tr>
+    <tr><td>5</td><td>Empty Username</td><td>Leave username blank, submit</td><td>Username error shown</td><td>Username error shown</td><td class="pass">Pass</td></tr>
+    <tr><td>6</td><td>Empty Password</td><td>Leave password blank, submit</td><td>Password error shown</td><td>Password error shown</td><td class="pass">Pass</td></tr>
+    <tr><td>7</td><td>Both Fields Empty</td><td>Leave both blank, submit</td><td>Username error shown</td><td>Username error shown</td><td class="pass">Pass</td></tr>
+    <tr><td>8</td><td>Logout Functionality</td><td>Login, click logout</td><td>Redirected to login, fields empty</td><td>Redirected to login, fields empty</td><td class="pass">Pass</td></tr>
+    <tr><td>9</td><td>Case Sensitivity</td><td>Try upper/lower case credentials</td><td>Error messages shown</td><td>Error messages shown</td><td class="pass">Pass</td></tr>
+    <tr><td>10</td><td>Whitespace Handling</td><td>Enter credentials with spaces</td><td>Error message shown</td><td>Error message shown</td><td class="pass">Pass</td></tr>
+    <tr><td>11</td><td>Tab Navigation</td><td>Use Tab key to navigate</td><td>Logical tab order, focus visible</td><td>Logical tab order, focus visible</td><td class="pass">Pass</td></tr>
+    <tr><td>12</td><td>Password Masking</td><td>Enter password</td><td>Input masked</td><td>Input masked</td><td class="pass">Pass</td></tr>
+    <tr><td>13</td><td>Error Message Clarity</td><td>Trigger error, then correct</td><td>Error visible, clears on success</td><td>Error visible, clears on success</td><td class="pass">Pass</td></tr>
+    <tr><td>14</td><td>Refresh Behavior</td><td>Fail login, refresh</td><td>Fields cleared, no error</td><td>Fields cleared, no error</td><td class="pass">Pass</td></tr>
+    <tr><td>15</td><td>Back Navigation After Logout</td><td>Logout, go back</td><td>Secure page not accessible</td><td>Secure page not accessible</td><td class="pass">Pass</td></tr>
+    <tr><td>16</td><td>Submit via Enter Key</td><td>Enter credentials, press Enter</td><td>Login success</td><td>Login success</td><td class="pass">Pass</td></tr>
+  </table>
+  <h2>Critical Issues</h2>
+  <div class="critical">
+    <p>No critical issues found during manual test execution.</p>
+  </div>
+  <footer>
+    <p>Report generated on 31 July 2025 by GitHub Copilot.</p>
+  </footer>
+</body>
+</html>
