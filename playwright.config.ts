@@ -27,6 +27,7 @@ export default defineConfig({
   use: {
     baseURL: 'https://practicetestautomation.com',
     trace: 'on-first-retry',
+    headless: true, // Run tests in non-headless mode by default
   },
 
   /* Configure projects for major browsers */

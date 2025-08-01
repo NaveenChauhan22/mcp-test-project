@@ -1,17 +1,19 @@
 # MCP Test Project
 
-This project demonstrates manual and automated testing of the Practice Test Automation login page using Playwright and the Model Context Protocol (MCP).
+This project demonstrates manual and automated testing of the Practice Test Automation login page using Playwright Model Context Protocol (MCP) for manual test planning, test cases creation and execution. The project also includes automated tests that can be executed separately, i.e. outside of the MCP verse.
 
 ## Project Structure
 
+- `.github/workflows/playwright.yml` - Defines workflow for GitHub Actions.
 - `manual-testing/` — Contains manual test cases, test plans, results, and screenshots.
   - `test-cases.md` — All manual test scenarios and steps.
   - `test-plan.md` — Manual test plan and strategy.
   - `test-results.html` — Latest manual test execution report.
   - `screenshots/` — Screenshots for failed manual test assertions.
+- `pageObjects/` - Contains page objects (`loginPageObject.ts`).
 - `playwright-report/` — Playwright automated test reports.
 - `test-results/` — Error context and results for individual manual test runs.
-- `tests/` — Automated Playwright test scripts (`tests.spec.ts`).
+- `tests/` — Automated Playwright test scripts (`login.spec.ts`).
 - `prompts/` — Prompt files for AI-assisted and manual test execution.
 - `playwright.config.ts` — Playwright configuration.
 - `tsconfig.json` — TypeScript configuration.
@@ -23,7 +25,7 @@ Manual test cases are defined in `manual-testing/test-cases.md` and executed int
 
 ## Automated Testing
 
-Automated tests are implemented in `tests/tests.spec.ts` using Playwright. Reports are generated in the `playwright-report/` directory.
+Automated tests are implemented in `tests/login.spec.ts` using Playwright. Reports are generated in the `playwright-report/` directory.
 
 ## How to Run
 
