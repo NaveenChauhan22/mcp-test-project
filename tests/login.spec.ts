@@ -1,5 +1,5 @@
 import { test, expect } from '@playwright/test';
-import { LoginPageObject } from '../pageObjects/LoginPageObject';
+import { LoginPageObject } from '../pageObjects/loginPageObject';
 
 // Test data and expected values
 const VALID_USERNAME = 'student';
