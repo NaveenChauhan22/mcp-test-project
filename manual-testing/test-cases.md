@@ -15,7 +15,7 @@
       - *Expectation:* Redirects to `/logged-in-successfully/`
       - *Expectation:* Page contains text **"Logged In Successfully"**
       - *Expectation:* "Log out" button is visible.
-      - *Expectation (Optional):* Page displays the correct username.
+      - *Expectation:* Page displays the correct username in message **"Congratulations <username>. You successfully logged in!"**.
 - **Final Result:** Pass if all above expectations are met.
 
 ### 2. Invalid Username
@@ -145,10 +145,24 @@
 ### 15. Back Navigation After Logout
 
 - **Objective:** Secure page not accessible after logout.
-- **Pre-requisites:** User logged in, then logged out.
+- **Pre-requisites:** Browser is on the login page.
 - **Test Steps & Expectations:**
-  1. Press browser Back button.
+  1. Enter username: `student`
+      - *Expectation:* Username field accepts input.
+  2. Enter password: `Password123`
+      - *Expectation:* Password field accepts input.
+  3. Click "Submit".
+      - *Expectation:* Redirects to `/logged-in-successfully/`
+      - *Expectation:* Page contains text **"Logged In Successfully"**
+      - *Expectation:* "Log out" button is visible.
+      - *Expectation:* Page displays the correct username in message **"Congratulations <username>. You successfully logged in!"**.
+  4. Click "Log out" button.
+      - *Expectation:* Redirects to login page.
+      - *Expectation:* Login form is present and fields are empty.
+  5. Press browser Back button.
       - *Expectation:* Access to secure page is prevented (redirected or blocked).
+      - *Expectation:* Does not redirect to `/logged-in-successfully/`
+      - *Expectation:* Page does not contain text **"Logged In Successfully"**
 
 ### 16. Submit via Enter Key
 

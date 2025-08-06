@@ -11,14 +11,14 @@ model: 'GPT-4.1'
 
 Instructions: |
   1. Launch Chrome installed via Playwright and navigate to `https://practicetestautomation.com/practice-test-login/`.
-  2. For every scenario listed in the `manual-testing/test-cases.md` file (including all functional and usability cases):
-    - Execute all scenarios sequentially, ensuring no scenario is skipped. Do not request any additional information or clarification until all scenarios are executed.
-    - For each scenario:
-      - Execute each step as described in the scenario.
+  2. For every Functional Test case listed in the `manual-testing/test-cases.md` file (all 16 tests):
+    - Execute all tests sequentially, ensuring no test is skipped. Do not request any additional information or clarification until all tests are executed.
+    - For each test:
+      - Execute each step as described in the test.
       - Capture screenshots for failed assertions only.
       - Record the actual result and any discrepancies.
       - Append test results to the `manual-testing/test-results.html` file, with following details:
-        - Scenario name and description
+        - Test name and description
         - Steps executed
         - Expected and actual results
         - Assertions (pass/fail)
