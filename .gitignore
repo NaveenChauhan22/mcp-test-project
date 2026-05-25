@@ -5,3 +5,8 @@ node_modules/
 /playwright-report/
 /blob-report/
 /playwright/.cache/
+
+# MCP and testing artifacts
+.playwright-mcp/
+manual-testing/exploratory-testing/screenshots/
+manual-testing/screenshots/

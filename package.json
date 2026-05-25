@@ -4,7 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "tsc"
+    "build": "tsc",
+    "playwright-install": "npx playwright install",
+    "mcp-server": "npx playwright run-server --host 127.0.0.1 --port 9322",
+    "mcp-start": "npm run playwright-install && npm run mcp-server"
   },
   "keywords": [],
   "author": "",

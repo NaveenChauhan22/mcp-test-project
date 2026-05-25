@@ -5,7 +5,8 @@ model: 'GPT-4.1'
 
 - **Pre-requisites:**
   - Install Playwright MCP server if not already installed.
-  - Ensure the Playwright MCP server is running. If not, start it.
+  - If needed, install Playwright browsers: `npm run playwright-install`.
+  - Ensure the Playwright MCP server is running. If not, start it with `npm run mcp-server`.
   - If `manual-testing/test-results.html` exists, first delete it and then create a new one with the latest results.
   - Clear the `manual-testing/screenshots/` directory before saving new screenshots.
 

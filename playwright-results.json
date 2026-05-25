@@ -1,0 +1,75 @@
+
+Running 17 tests using 6 workers
+
+[1A[2K[1/17] [chromium] › tests/login.spec.ts:56:7 › Login Tests › Unsuccessful login with empty username and password
+[1A[2K[2/17] [chromium] › tests/login.spec.ts:32:7 › Login Tests › Unsuccessful login with invalid username
+[1A[2K[3/17] [chromium] › tests/login.spec.ts:40:7 › Login Tests › Unsuccessful login with invalid password
+[1A[2K[4/17] [chromium] › tests/login.spec.ts:23:7 › Login Tests › Successful login with valid credentials
+[1A[2K[5/17] [chromium] › tests/login.spec.ts:48:7 › Login Tests › Unsuccessful login with invalid username and password
+[1A[2K[6/17] [chromium] › tests/login.spec.ts:64:7 › Login Tests › Unsuccessful login with empty username
+[1A[2K[7/17] [chromium] › tests/login.spec.ts:80:7 › Login Tests › Case sensitivity for username and password
+[1A[2K[8/17] [chromium] › tests/login.spec.ts:72:7 › Login Tests › Unsuccessful login with empty password
+[1A[2K[9/17] [chromium] › tests/login.spec.ts:92:7 › Login Tests › Leading/trailing whitespace in credentials
+[1A[2K[10/17] [chromium] › tests/login.spec.ts:100:7 › Login Tests › Tab keyboard navigation
+[1A[2K[11/17] [chromium] › tests/login.spec.ts:114:7 › Login Tests › Password masking
+[1A[2K[12/17] [chromium] › tests/login.spec.ts:120:7 › Login Tests › Error message clarity and clearing
+[1A[2K[13/17] [chromium] › tests/login.spec.ts:133:7 › Login Tests › Refresh after failed login clears data
+[1A[2K[14/17] [chromium] › tests/login.spec.ts:145:7 › Login Tests › Back navigation after logout
+[1A[2K[15/17] [chromium] › tests/login.spec.ts:158:7 › Login Tests › Submit via Enter key
+[1A[2K[16/17] [chromium] › tests/login.spec.ts:167:7 › Login Tests › Logout returns to login screen and fields are empty
+[1A[2K[17/17] [chromium] › tests/login.spec.ts:180:7 › Login Tests › Logout after successful login returns to login screen
+[1A[2K  1) [chromium] › tests/login.spec.ts:158:7 › Login Tests › Submit via Enter key ───────────────────
+
+    Error: [31mTimed out 5000ms waiting for [39m[2mexpect([22m[31mpage[39m[2m).[22mtoHaveURL[2m([22m[32mexpected[39m[2m)[22m
+
+    Expected pattern: [32m/logged-in-successfully/[39m
+    Received string:  [31m"https://practicetestautomation.com/practice-test-login/"[39m
+    Call log:
+    [2m  - Expect "toHaveURL" with timeout 5000ms[22m
+    [2m    9 × unexpected value "https://practicetestautomation.com/practice-test-login/"[22m
+
+
+       at ../pageObjects/loginPageObject.ts:35
+
+      33 |
+      34 |   async verifyURLContains(fragment: string) {
+    > 35 |    await expect(this.page).toHaveURL(new RegExp(`${fragment}`));
+         |                            ^
+      36 |   }
+      37 |
+      38 |   async verifyInputsVisible() {
+        at LoginPageObject.verifyURLContains (/Users/administrator/Desktop/Playwright/mcp-test-project/pageObjects/loginPageObject.ts:35:28)
+        at /Users/administrator/Desktop/Playwright/mcp-test-project/tests/login.spec.ts:163:21
+
+    Error Context: playwright-report/login-Login-Tests-Submit-via-Enter-key-chromium/error-context.md
+
+
+[1A[2K  2) [chromium] › tests/login.spec.ts:145:7 › Login Tests › Back navigation after logout ───────────
+
+    Error: [31mTimed out 5000ms waiting for [39m[2mexpect([22m[31mpage[39m[2m).[22mnot[2m.[22mtoHaveURL[2m([22m[32mexpected[39m[2m)[22m
+
+    Expected pattern: not [32m/.*logged-in-successfully.*/[39m
+    Received string: [31m"[7mhttps://practicetestautomation.com/logged-in-successfully/[27m"[39m
+    Call log:
+    [2m  - Expect "not toHaveURL" with timeout 5000ms[22m
+    [2m    9 × unexpected value "https://practicetestautomation.com/logged-in-successfully/"[22m
+
+
+      152 |     await loginPage.verifyInputsVisible();
+      153 |     await page.goBack();
+    > 154 |     await expect(page).not.toHaveURL(new RegExp(`.*${EXPECTED_URL_FRAGMENT}.*`));
+          |                            ^
+      155 |     await loginPage.verifyInputsVisible();
+      156 |   });
+      157 |
+        at /Users/administrator/Desktop/Playwright/mcp-test-project/tests/login.spec.ts:154:28
+
+    Error Context: playwright-report/login-Login-Tests-Back-navigation-after-logout-chromium/error-context.md
+
+
+[1A[2K  2 failed
+    [chromium] › tests/login.spec.ts:145:7 › Login Tests › Back navigation after logout ────────────
+    [chromium] › tests/login.spec.ts:158:7 › Login Tests › Submit via Enter key ────────────────────
+  15 passed (19.3s)
+
+[36m  Serving HTML report at http://localhost:9323. Press Ctrl+C to quit.[39m

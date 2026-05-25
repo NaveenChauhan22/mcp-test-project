@@ -38,8 +38,11 @@ Automated tests are implemented in `tests/login.spec.ts` using Playwright. Repor
 2. View results in `manual-testing/test-results.html`.
 
 ### Exploratory Test Execution
-1. Follow the instructions in `prompts/exploratory-ai-testing.prompt.md` to execute exploratory tests.
-2. View results in `manual-testing/exploratory-testing/test-results.html`.
+1. Install project dependencies: `npm install`.
+2. Install Playwright browsers: `npm run playwright-install`.
+3. Start the Playwright MCP server: `npm run mcp-server` or use `npm run mcp-start` to install browsers and start the server in one command.
+4. Follow the instructions in `prompts/exploratory-ai-testing.prompt.md` to execute exploratory tests.
+5. View results in `manual-testing/exploratory-testing/test-results.html`.
 
 ### Automated Test Execution
 1. Run Playwright tests:
