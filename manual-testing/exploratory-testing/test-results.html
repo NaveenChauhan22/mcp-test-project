@@ -1,73 +1,44 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Exploratory Testing Results</title>
-  <style>
-    body { font-family: Arial, sans-serif; margin: 2em; }
-    h1 { color: #2c3e50; }
-    .scenario { margin-bottom: 2em; border-bottom: 1px solid #ccc; padding-bottom: 1em; }
-    .pass { color: green; }
-    .fail { color: red; }
-    .step { margin-left: 1em; }
-    .screenshot { margin-top: 0.5em; }
-    .meta { font-size: 0.9em; color: #888; }
-  </style>
-</head>
+<head><meta charset="utf-8"><title>Exploratory MCP Test Results</title></head>
 <body>
-  <h1>Exploratory Testing Results</h1>
-  <div class="scenario">
-    <h2>Scenario: Valid Login</h2>
-    <div class="meta">Execution Time: <span>~2s</span></div>
-    <p>Description: Test login with valid credentials.</p>
-    <ul>
-      <li class="step">Open login page</li>
-      <li class="step">Enter username: <b>student</b></li>
-      <li class="step">Enter password: <b>Password123</b></li>
-      <li class="step">Click Submit</li>
-      <li class="step">Verify URL contains <b>logged-in-successfully</b></li>
-      <li class="step">Verify success message: <b>Congratulations student. You successfully logged in!</b></li>
-      <li class="step">Verify Log out button is displayed</li>
-    </ul>
-    <div>Assertion: <span class="pass">PASS</span></div>
-    <div>Expected Result: User is logged in and sees success message.</div>
-    <div>Actual Result: User is logged in and sees success message.</div>
-  </div>
-  <div class="scenario">
-    <h2>Scenario: Invalid Username</h2>
-    <div class="meta">Execution Time: <span>~2s</span></div>
-    <p>Description: Test login with invalid username.</p>
-    <ul>
-      <li class="step">Open login page</li>
-      <li class="step">Enter username: <b>incorrectUser</b></li>
-      <li class="step">Enter password: <b>Password123</b></li>
-      <li class="step">Click Submit</li>
-      <li class="step">Verify error message: <b>Your username is invalid!</b></li>
-    </ul>
-    <div>Assertion: <span class="fail">FAIL</span></div>
-    <div>Expected Result: Error message for invalid username is shown.</div>
-    <div>Actual Result: Error message for invalid username is shown.</div>
-    <div class="screenshot">
-      <a href="screenshots/username-invalid.png" target="_blank">Screenshot (failure)</a>
-    </div>
-  </div>
-  <div class="scenario">
-    <h2>Scenario: Invalid Password</h2>
-    <div class="meta">Execution Time: <span>~2s</span></div>
-    <p>Description: Test login with invalid password.</p>
-    <ul>
-      <li class="step">Open login page</li>
-      <li class="step">Enter username: <b>student</b></li>
-      <li class="step">Enter password: <b>incorrectPassword</b></li>
-      <li class="step">Click Submit</li>
-      <li class="step">Verify error message: <b>Your password is invalid!</b></li>
-    </ul>
-    <div>Assertion: <span class="fail">FAIL</span></div>
-    <div>Expected Result: Error message for invalid password is shown.</div>
-    <div>Actual Result: Error message for invalid password is shown.</div>
-    <div class="screenshot">
-      <a href="screenshots/password-invalid.png" target="_blank">Screenshot (failure)</a>
-    </div>
-  </div>
+  <h1>Exploratory MCP Test Results</h1>
+  <p><strong>Execution:</strong> Live Playwright MCP browser actions</p>
+  <p><strong>Started:</strong> </p>
+  <p><strong>Target URL:</strong> https://practicetestautomation.com/practice-test-login/</p>
+  <p><strong>Browser:</strong> Chromium (launched via Playwright MCP)</p>
+  <h2>Summary</h2>
+  <ul>
+    <li>Total scenarios: 16</li>
+    <li>Passed scenarios: 13</li>
+    <li>Failed scenarios: 3</li>
+    <li>Total assertions: 39</li>
+    <li>Passed assertions: 31</li>
+    <li>Failed assertions: 8</li>
+  </ul>
+  <h2>Results</h2>
+  <ol>
+    <li><strong>1. Valid Login</strong> — PASS
+      <ul><li>Expectations met: redirect, success text, logout visible, username shown</li><li>Execution time: N/A</li></ul>
+    </li>
+    <li><strong>2. I    <li><strong>2. I    <li><strong>2. I    <li><strong>2. I    <li><strong>2. I    <li><strong>2. I    <li><strg>    <li><stronme    <li><strd Inv    <li><strong>2. I    <li><strong>2. I    <li><strong>2. I    <li><strong>2SS</li>
+    <li><strong>6. Empty Password</strong    <li><strong>6. Empty Password</strong    <li><strong>6. Empty Passwrong> — PASS</li>
+    <li><strong>8. Logout    <li><strong>8. Logout    <li><strong>8. Logout    <li><strong>8. Logout    <li><strong>8/l    <li><strong>8. Logout    <li><strong>8. Logout    <li><strong>8. Log>
+    <li><strong>11.    <Ke    <li><strong>11.    <Ke    <PA    <li><strong>11.    <Ke    <lwo    <li><strong>11.    <Ke   /li>    <li><strong>11.    <Ke    <lge Clarity &amp; Clearing</strong> — PASS</li>
+    <li><strong>14. Re    <lBe    <li><strong>1��    <
+                                               lds cleared after refresh; no error message after refresh</li>
+        <li>Screenshot: <a href="screenshots/Refresh_Behavior.png">Refresh_        <li>Screenshot: <a href="screenshots/Refresh_Behavior.png">Refresh_        <li>Screenshot: <a href="screenshots/Refresh_Behavior.png">Refresh_        <li>Screenshot: <a href="screenshots/Refresh_Behavior.png">Refresh_        <li>Screenshot: <en        <li>Screenshot: <a href="screenshots/Refresh_Behavior.png">Refresh_        <li>Screenshot: <a href="screenshots/Refresh_Be v        <li>Screenshot: <a href="screenshots/Refresh_Behavior.png">Refresh_        <li>Screenshot: <a href="screenshots/Refresh_Behavior.png">Refresh_        <li>Screenshot: <a href="screenit_via_Enter_Key.png</a></li>
+      </ul>
+    </li>
+  </ol>
+
+  <h2>Critical Issues</h2>
+  <ul>
+    <li>Refresh does not clear error state as expected (Scenario 14).</li>
+    <li>Back navigation returns to secure    <li>Back navigation returns to secure    <li>Backkey does not submit the login form (Scenario 16).</li>
+  </ul>
+
+  <h2>Overall Status</h2>
+  <p>FAILED — not all scenarios and assertions passed.</p>
 </body>
 </html>
