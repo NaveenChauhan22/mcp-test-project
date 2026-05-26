@@ -10,3 +10,4 @@ node_modules/
 .playwright-mcp/
 manual-testing/exploratory-testing/screenshots/
 manual-testing/screenshots/
+dist/
