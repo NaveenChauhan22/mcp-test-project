@@ -1,44 +1,78 @@
 <!doctype html>
-<html lang="en">
-<head><meta charset="utf-8"><title>Exploratory MCP Test Results</title></head>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Exploratory Login Test Report</title>
+	<style>
+		body{font-family:Arial,Helvetica,sans-serif;padding:20px;color:#222}
+		.meta{margin-bottom:12px}
+		.chart{width:160px;height:160px;border-radius:50%;background:conic-gradient(#4caf50 0 60%, #f44336 60% 80%, #ccc 80% 100%);display:inline-block}
+		.legend{display:inline-block;vertical-align:top;margin-left:16px}
+		table{border-collapse:collapse;width:100%;margin-top:12px}
+		th,td{border:1px solid #ddd;padding:8px;text-align:left}
+		.failed{color:#f44336}
+	</style>
+</head>
 <body>
-  <h1>Exploratory MCP Test Results</h1>
-  <p><strong>Execution:</strong> Live Playwright MCP browser actions</p>
-  <p><strong>Started:</strong> </p>
-  <p><strong>Target URL:</strong> https://practicetestautomation.com/practice-test-login/</p>
-  <p><strong>Browser:</strong> Chromium (launched via Playwright MCP)</p>
-  <h2>Summary</h2>
-  <ul>
-    <li>Total scenarios: 16</li>
-    <li>Passed scenarios: 13</li>
-    <li>Failed scenarios: 3</li>
-    <li>Total assertions: 39</li>
-    <li>Passed assertions: 31</li>
-    <li>Failed assertions: 8</li>
-  </ul>
-  <h2>Results</h2>
-  <ol>
-    <li><strong>1. Valid Login</strong> — PASS
-      <ul><li>Expectations met: redirect, success text, logout visible, username shown</li><li>Execution time: N/A</li></ul>
-    </li>
-    <li><strong>2. I    <li><strong>2. I    <li><strong>2. I    <li><strong>2. I    <li><strong>2. I    <li><strong>2. I    <li><strg>    <li><stronme    <li><strd Inv    <li><strong>2. I    <li><strong>2. I    <li><strong>2. I    <li><strong>2SS</li>
-    <li><strong>6. Empty Password</strong    <li><strong>6. Empty Password</strong    <li><strong>6. Empty Passwrong> — PASS</li>
-    <li><strong>8. Logout    <li><strong>8. Logout    <li><strong>8. Logout    <li><strong>8. Logout    <li><strong>8/l    <li><strong>8. Logout    <li><strong>8. Logout    <li><strong>8. Log>
-    <li><strong>11.    <Ke    <li><strong>11.    <Ke    <PA    <li><strong>11.    <Ke    <lwo    <li><strong>11.    <Ke   /li>    <li><strong>11.    <Ke    <lge Clarity &amp; Clearing</strong> — PASS</li>
-    <li><strong>14. Re    <lBe    <li><strong>1��    <
-                                               lds cleared after refresh; no error message after refresh</li>
-        <li>Screenshot: <a href="screenshots/Refresh_Behavior.png">Refresh_        <li>Screenshot: <a href="screenshots/Refresh_Behavior.png">Refresh_        <li>Screenshot: <a href="screenshots/Refresh_Behavior.png">Refresh_        <li>Screenshot: <a href="screenshots/Refresh_Behavior.png">Refresh_        <li>Screenshot: <en        <li>Screenshot: <a href="screenshots/Refresh_Behavior.png">Refresh_        <li>Screenshot: <a href="screenshots/Refresh_Be v        <li>Screenshot: <a href="screenshots/Refresh_Behavior.png">Refresh_        <li>Screenshot: <a href="screenshots/Refresh_Behavior.png">Refresh_        <li>Screenshot: <a href="screenit_via_Enter_Key.png</a></li>
-      </ul>
-    </li>
-  </ol>
+	<h1>Exploratory Login Test Report</h1>
+	<p><em>Generated from live Playwright MCP exploratory testing</em></p>
+	<div class="meta">
+		<div><strong>Date:</strong> 2026-05-26T05:42:34Z</div>
+		<div><strong>Target URL:</strong> https://practicetestautomation.com/practice-test-login/</div>
+		<div><strong>Browser:</strong> Chromium via Playwright MCP</div>
+		<div><strong>Execution mode:</strong> Playwright MCP interactive</div>
+		<div><strong>Tester:</strong> AI via Playwright MCP</div>
+	</div>
 
-  <h2>Critical Issues</h2>
-  <ul>
-    <li>Refresh does not clear error state as expected (Scenario 14).</li>
-    <li>Back navigation returns to secure    <li>Back navigation returns to secure    <li>Backkey does not submit the login form (Scenario 16).</li>
-  </ul>
+	<div style="display:flex;align-items:center">
+		<div class="chart" aria-hidden="true"></div>
+		<div class="legend">
+			<div><strong>Total:</strong> 10</div>
+			<div><strong>Passed:</strong> 7</div>
+			<div class="failed"><strong>Failed:</strong> 3</div>
+		</div>
+	</div>
 
-  <h2>Overall Status</h2>
-  <p>FAILED — not all scenarios and assertions passed.</p>
+	<h2>Release Decision: No-Go</h2>
+	<p>Rationale: One or more failures with High/Critical severity observed (form submission and Enter-key behavior inconsistent).</p>
+
+	<h2>Failed Test Details</h2>
+	<table>
+		<tr><th>Test</th><th>Severity</th><th>Failure</th><th>Screenshot</th></tr>
+		<tr>
+			<td>Empty Submit</td>
+			<td class="failed">Medium</td>
+			<td>Error message shown: "Your username is invalid!" upon empty submit (fields cleared)</td>
+			<td><a href="screenshots/empty-submit-failure.png">empty-submit-failure.png</a></td>
+		</tr>
+		<tr>
+			<td>Enter Key Submit</td>
+			<td class="failed">Medium</td>
+			<td>Pressing Enter did not navigate to success page in some attempts; inconsistently handled by page JS</td>
+			<td><a href="screenshots/enter-key-failure.png">enter-key-failure.png</a></td>
+		</tr>
+		<tr>
+			<td>Back Navigation Post-Logout</td>
+			<td class="failed">Low</td>
+			<td>Using browser back restored logged-in page but state appears inconsistent</td>
+			<td>N/A</td>
+		</tr>
+	</table>
+
+	<h2>Full Exploratory Test Details</h2>
+	<table>
+		<tr><th>Test</th><th>Summary</th><th>Steps</th><th>Expected</th><th>Actual</th><th>Result</th></tr>
+		<tr><td>1. Empty Submit</td><td>Submit with both fields empty</td><td>Open page → Click Submit</td><td>No navigation; show validation or no action</td><td>Displayed "Your username is invalid!" and cleared fields</td><td class="failed">Failed</td></tr>
+		<tr><td>2. Successful Login</td><td>Valid credentials</td><td>Type student/Password123 → Click Submit</td><td>Navigate to logged-in page</td><td>Navigation to /logged-in-successfully/ and message shown</td><td>Passed</td></tr>
+		<tr><td>3. Logout</td><td>Click Log out after successful login</td><td>Click Log out</td><td>Return to login page</td><td>Returned to login page</td><td>Passed</td></tr>
+		<tr><td>4. Invalid Username</td><td>Wrong username</td><td>Type incorrectUser/Password123 → Submit</td><td>Error message "Your username is invalid!"</td><td>Error shown</td><td>Passed</td></tr>
+		<tr><td>5. Invalid Password</td><td>Wrong password</td><td>Type student/incorrectPassword → Submit</td><td>Error message "Your password is invalid!"</td><td>Error shown</td><td>Passed</td></tr>
+		<tr><td>6. Submit via Enter key</td><td>Use Enter to submit</td><td>Fill fields → press Enter</td><td>Form submits same as click</td><td>Inconsistent; sometimes not submitting</td><td class="failed">Failed</td></tr>
+		<tr><td>7. Focus order</td><td>Tab through fields</td><td>Tab from top → observe focus</td><td>Username → Password → Submit</td><td>Focus order correct</td><td>Passed</td></tr>
+		<tr><td>8. Password masking</td><td>Password characters masked</td><td>Type password</td><td>Input type password</td><td>Masked</td><td>Passed</td></tr>
+		<tr><td>9. Refresh on logged-in page</td><td>Reload after login</td><td>Login → Refresh</td><td>Remain on logged-in page</td><td>Remains on logged-in page</td><td>Passed</td></tr>
+		<tr><td>10. Back navigation after logout</td><td>Use back to return</td><td>Logout → Back</td><td>Do not expose authenticated content</td><td>Returned to logged-in page content</td><td class="failed">Failed</td></tr>
+	</table>
+
 </body>
 </html>
